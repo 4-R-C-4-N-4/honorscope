@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Honorscope — Celestial Position Tracker</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌌</text></svg>" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Three.js canvas will be inserted here -->
+      <div id="canvas-container"></div>
+
+      <!-- Time Controls Panel -->
+      <div id="time-controls" class="glass-panel">
+        <div class="panel-header">
+          <span class="panel-icon">⏱</span>
+          <span>Time Control</span>
+        </div>
+        <div id="current-date" class="date-display"></div>
+        <div class="control-row">
+          <input type="datetime-local" id="date-picker" class="date-input" />
+          <button id="now-btn" class="ctrl-btn" title="Jump to now">Now</button>
+        </div>
+        <div class="control-row">
+          <button id="reverse-btn" class="ctrl-btn" title="Reverse">◀◀</button>
+          <button id="play-pause-btn" class="ctrl-btn play-btn" title="Play/Pause">▶</button>
+          <button id="forward-btn" class="ctrl-btn" title="Forward">▶▶</button>
+        </div>
+        <div class="speed-controls">
+          <label>Speed:</label>
+          <div id="speed-buttons" class="speed-btn-group"></div>
+        </div>
+        <div class="vantage-controls">
+          <label>Vantage Point:</label>
+          <select id="vantage-select" class="vantage-select">
+            <option value="Earth" selected>🌍 Earth</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Zodiac Panel -->
+      <div id="zodiac-panel" class="glass-panel">
+        <div class="panel-header">
+          <span class="panel-icon">♈</span>
+          <span>Planetary Positions</span>
+          <span id="observer-label" class="observer-label">from Earth</span>
+        </div>
+        <div id="planet-list"></div>
+      </div>
+
+      <!-- Title overlay -->
+      <div id="title-overlay">
+        <h1>✦ HONORSCOPE ✦</h1>
+        <p>Real-time Celestial Position Tracker</p>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
