@@ -1,0 +1,36 @@
+# Node.js
+node_modules/
+.npm/
+.yarn/*
+.pnp.*
+
+# TypeScript
+*.tsbuildinfo
+dist/
+build/
+out/
+.next/
+.svelte-kit/
+.vite/
+**/.vitepress/dist
+
+# Logs & Diagnostics
+.log
+npm-debug.log*
+coverage/
+.nyc_output
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# IDE/Editor
+.vscode/*
+!.vscode/settings.json
+.idea/
+*.swp
+
+# OS/Temp
+.DS_Store
+Thumbs.db   
